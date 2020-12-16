@@ -46,4 +46,4 @@ Or else the focus may not be back in the gameview for you to move the plane!
 
 * Name: Rasmus Silander
 * E-Mail: rasmus.silander@tuni.fi
-* Github @ -
+* Github @ rsilan
