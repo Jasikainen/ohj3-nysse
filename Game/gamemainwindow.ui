@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameMainWindow</class>
+ <widget class="QMainWindow" name="GameMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>685</width>
+    <height>546</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGraphicsView" name="gameView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>180</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="movementKeyLayout">
+     <property name="leftMargin">
+      <number>3</number>
+     </property>
+     <property name="horizontalSpacing">
+      <number>1</number>
+     </property>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="downBtn">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Down, S</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="leftBtn">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Left, A</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="rightBtn">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Right, D</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="upBtn">
+       <property name="font">
+        <font>
+         <family>STIX</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Up, W</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="3">
+      <widget class="QPushButton" name="spaceBtn">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>410</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="startEndLayout">
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <property name="leftMargin">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="startBtn">
+       <property name="maximumSize">
+        <size>
+         <width>16777213</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Clean</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="tabletTracking">
+        <bool>false</bool>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Start</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>75</width>
+         <height>10</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+S</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>300</number>
+       </property>
+       <property name="autoRepeatInterval">
+        <number>100</number>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="endBtn">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Clean</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="tabletTracking">
+        <bool>false</bool>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>End</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>15</width>
+         <height>10</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+S</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>300</number>
+       </property>
+       <property name="autoRepeatInterval">
+        <number>100</number>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>80</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Cantarell</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>SCORE</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="pointsLCD">
+     <property name="font">
+      <font>
+       <family>Clean</family>
+      </font>
+     </property>
+     <property name="digitCount">
+      <number>5</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>120</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="accuracyLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Cantarell</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Accuracy:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QProgressBar" name="accuracyBar">
+       <property name="font">
+        <font>
+         <family>Clean</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>260</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="TextLayout">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="instructionLabel">
+       <property name="font">
+        <font>
+         <family>Cantarell</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Movement: WASD
+Shoot: SPACEBAR</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="sizeIncrement">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="tabletTracking">
+        <bool>true</bool>
+       </property>
+       <property name="toolTipDuration">
+        <number>-1</number>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="radarLabel">
+       <property name="font">
+        <font>
+         <family>Clean</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string>Radar:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>330</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="passengerRadarLayout">
+     <item>
+      <widget class="QLabel" name="passengerLabel">
+       <property name="font">
+        <font>
+         <family>Cantarell</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Passengers:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="passengerLCD">
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="digitCount">
+        <number>2</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>360</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="vehicleRadarLayout">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="vehicleLabel">
+       <property name="font">
+        <font>
+         <family>Cantarell</family>
+         <pointsize>8</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Vehicles:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="vehicleLCD">
+       <property name="font">
+        <font>
+         <family>Clean</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="digitCount">
+        <number>2</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>685</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
