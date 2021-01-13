@@ -1,5 +1,6 @@
 ***
 # TIE-02402 - Programming 3: Techniques - project work
+Grading achieved 50/50 points (grade 5)
 ## Nysse Game
 Game based in Tampere city centre where main actor is "Nysse" that is word "bus" in Tampere dialect (Finnish city).
 
